@@ -7,6 +7,7 @@ nav ul {
   nav li {
     border: 1px solid #cc0000;
     margin-right: 10px;
+    margin-bottom: 10px;
     width: 200px;
     background-color: #cc0000;
     display: inline-block;
