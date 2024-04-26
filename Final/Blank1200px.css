@@ -115,7 +115,7 @@ main img {
 .main2 {
   grid-column: span 12;
   display: grid;
-  grid-template-columns: repeat(4, 1fr) repeat(8, 1fr); /* Divide into 4 and 8 columns */
+  grid-template-columns: repeat(4, 1fr) repeat(8, 1fr);
   width: 1200px;
   padding-top: 60px;
   background-image: url(BG3.png);
@@ -214,10 +214,11 @@ main img {
 .t1{
   font-size: 18px;
   margin-left: 98px;
-  padding-top: 180px;
+  padding-top: 160px;
   color: #ffffff;
   width: 340px;
 }
+
 .scrolling-text-container {
   grid-column: span 12;
   font-size: 18px;
@@ -265,8 +266,43 @@ main img {
 }
 
 .portfolio {
+  position: relative;
   width: 1200px;
   margin-top: 7px;
+  overflow: hidden;
+}
+
+.portfolio .f-carousel__slide {
+  position: relative; 
+}
+
+.portfolio .f-carousel__slide:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98.8%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  pointer-events: none;
+}
+
+.portfolio .f-carousel__slide:hover .project-name {
+  opacity: 1; 
+}
+
+.project-name {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  Color: #FF4C4C;
+  font-size: 15px;
+  text-align: center;
+  width: 350px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .i1 img {
